@@ -140,7 +140,7 @@ void WriteColourBlock4( Vec3::Arg start, Vec3::Arg end, u8 const* indices, void*
 static int Unpack565( u8 const* packed, u8* colour )
 {
 	// build the packed value
-	int value = ( int )packed[0] | ( ( int )packed[1] << 8 );
+	int value = ( int )packed[1] | ( ( int )packed[0] << 8 );
 	
 	// get the components in the stored range
 	u8 red = ( u8 )( ( value >> 11 ) & 0x1f );
